@@ -28,7 +28,7 @@ table {
 /* Your Code Goes Here */
 #nav-header {
   background: #a9b3bd;
-  padding: 1rem 4rem;
+  padding: 2rem 0;
 }
 #nav-header .logo {
   font-weight: bold;
@@ -138,6 +138,7 @@ p {
   font-weight: bold;
   font-size: 2.8rem;
   color: #222222;
+  margin-bottom: 1rem;
   margin: 0 0 4rem 0;
 }
 #main .section .img-content {
@@ -156,6 +157,7 @@ p {
   font-weight: bold;
   font-size: 2.8rem;
   color: #222222;
+  margin-bottom: 1rem;
 }
 #main #projects .project {
   display: flex;
@@ -195,13 +197,63 @@ p {
   align-items: flex-end;
 }
 
-.btn-learn {
+.service-head img {
+  width: 100%;
+}
+.service-head h2 {
+  margin: -10rem 0 5rem 5rem;
+}
+
+#services {
+  padding: 0 4rem;
+}
+#services .tab-links {
+  display: flex;
+  justify-content: space-between;
+}
+#services .tab-content {
+  display: flex;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+}
+#services .tab-content .tab-text {
+  width: 50%;
+}
+#services .tab-content .tab-text h2 {
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+#services .tab-content .tab-img {
+  width: 50%;
+}
+
+.btn {
   margin: 2rem 0;
   padding: 1.6rem 5rem;
   background: #ffffff;
   border: 1px solid;
+  cursor: pointer;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
 }
-.btn-learn:hover {
+.btn.learn:hover {
+  background: #5e9fb9;
+  color: #ffffff;
+}
+.btn.link {
+  font-size: 3rem;
+}
+.btn.link:hover {
+  color: #ffffff;
+  background: #222222;
+}
+.btn.active-tab {
   background: #5e9fb9;
   color: #ffffff;
 }
