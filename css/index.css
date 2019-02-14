@@ -135,11 +135,13 @@ p {
   align-self: center;
 }
 #main .section .text-content h2 {
+  margin: 0 0 4rem 0;
+}
+#main .section .text-content h2 .sub {
   font-weight: bold;
   font-size: 2.8rem;
   color: #222222;
   margin-bottom: 1rem;
-  margin: 0 0 4rem 0;
 }
 #main .section .img-content {
   width: 50%;
@@ -153,7 +155,7 @@ p {
 #main #projects {
   padding: 0 4rem;
 }
-#main #projects h2 {
+#main #projects h2 .sub {
   font-weight: bold;
   font-size: 2.8rem;
   color: #222222;
@@ -201,6 +203,9 @@ p {
   width: 100%;
   max-width: 100%;
 }
+.service-head img.mobile-img {
+  display: none;
+}
 .service-head h2 {
   margin: -10rem 0 5rem 5rem;
 }
@@ -222,7 +227,7 @@ p {
 #services .tab-content .tab-text {
   width: 50%;
 }
-#services .tab-content .tab-text h2 {
+#services .tab-content .tab-text h2 .sub {
   font-weight: bold;
   font-size: 2.8rem;
   color: #222222;
@@ -240,6 +245,83 @@ p {
 #services .tab-content .tab-img img.img-active {
   display: flex;
   margin: 0 auto;
+}
+
+.contact-head img {
+  width: 100%;
+}
+.contact-head img.mobile-img {
+  display: none;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 4rem;
+}
+#contact .contact-section {
+  width: 50%;
+  font-size: 2rem;
+}
+#contact .contact-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2.6rem;
+}
+#contact .contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact-section form label {
+  margin: 1rem 0;
+}
+#contact .contact-section form div {
+  margin: 1rem 0;
+}
+#contact .contact-section form .project-summary {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact-section form .email-input p {
+  font-size: 1.2rem;
+}
+#contact .contact-section form .email-input input {
+  width: 50rem;
+  height: 2.6rem;
+  border-radius: 3px;
+  outline: none;
+  border: 0.5px solid lightgray;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+#contact .contact-section form .buildings select {
+  width: 50rem;
+  height: 2.6rem;
+  border-radius: 3px;
+  outline: none;
+  border: 0.5px solid lightgray;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+#contact .contact-section form .project-summary textarea {
+  width: 50rem;
+  height: 15rem;
+  border-radius: 3px;
+  outline: none;
+  border: 0.5px solid lightgray;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+#contact .contact-section form .radio-options input {
+  margin: 1rem 0;
+  padding: 0 2rem;
+}
+#contact .contact-work {
+  font-size: 2rem;
+  width: 30%;
+}
+#contact .contact-work h2 {
+  font-size: 3rem;
+  margin-bottom: 2.6rem;
 }
 
 .btn {
@@ -370,6 +452,12 @@ footer .ft-connect input {
 
   .service-head {
     margin: 0 0 3rem 0;
+  }
+  .service-head img.mobile-img {
+    display: block;
+  }
+  .service-head img.desk-img {
+    display: none;
   }
 
   #services {
