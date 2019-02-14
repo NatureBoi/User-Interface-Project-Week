@@ -199,6 +199,7 @@ p {
 
 .service-head img {
   width: 100%;
+  max-width: 100%;
 }
 .service-head h2 {
   margin: -10rem 0 5rem 5rem;
@@ -206,6 +207,7 @@ p {
 
 #services {
   padding: 0 4rem;
+  margin: 0 4rem 4rem 4rem;
 }
 #services .tab-links {
   display: flex;
@@ -213,12 +215,9 @@ p {
 }
 #services .tab-content {
   display: flex;
-  align-content: center;
-  align-self: center;
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
-  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 4rem;
 }
 #services .tab-content .tab-text {
   width: 50%;
@@ -231,6 +230,16 @@ p {
 }
 #services .tab-content .tab-img {
   width: 50%;
+  text-align: center;
+}
+#services .tab-content .tab-img img {
+  display: flex;
+  display: none;
+  max-width: 100%;
+}
+#services .tab-content .tab-img img.img-active {
+  display: flex;
+  margin: 0 auto;
 }
 
 .btn {
@@ -357,6 +366,34 @@ footer .ft-connect input {
   }
   #main #projects .project-1 .project-head, #main #projects .project-2 .project-head, #main #projects .project-3 .project-head {
     align-items: center;
+  }
+
+  .service-head {
+    margin: 0 0 3rem 0;
+  }
+
+  #services {
+    margin: 0 0 4rem 0;
+    padding: 0 2rem;
+  }
+  #services .tab-links {
+    text-align: center;
+    flex-direction: column;
+  }
+  #services .tab-content {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+  #services .tab-content .tab-text {
+    width: 100%;
+    margin: 2rem 0;
+  }
+  #services .tab-content .tab-text h2 {
+    margin: 0 0 2rem 0;
+  }
+  #services .tab-content .tab-img {
+    width: 100%;
   }
 }
 
