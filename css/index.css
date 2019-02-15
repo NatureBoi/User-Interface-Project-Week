@@ -26,38 +26,107 @@ table {
   border-spacing: 0;
 }
 /* Your Code Goes Here */
-#nav-header {
-  background: #a9b3bd;
-  padding: 2rem 0;
+.jumbo {
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 7.5rem;
+  color: #ffffff;
 }
-#nav-header .logo {
+
+.sub {
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+
+.ft-head {
+  font-weight: regular;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #ffffff;
+}
+
+.ft-text {
+  font-weight: regular;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  color: #ffffff;
+}
+
+.logo {
   font-weight: bold;
   font-size: 2.4rem;
   color: #ffffff;
 }
-#nav-header .menu-btn {
-  position: absolute;
-  z-index: 999;
-  right: 35px;
-  top: 10px;
-  cursor: pointer;
+
+.nav-text {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 8.5rem;
+  color: #ffffff;
 }
-#nav-header .menu-btn .btn-line {
+
+.btn {
+  margin: 2rem 0;
+  padding: 1.6rem 5rem;
+  background: #ffffff;
+  border: 1px solid;
+  cursor: pointer;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+}
+.btn.learn:hover {
+  background: #5e9fb9;
+  color: #ffffff;
+}
+.btn.link {
+  font-size: 3rem;
+}
+.btn.link:hover {
+  color: #ffffff;
+  background: #222222;
+}
+.btn.active-tab {
+  background: #5e9fb9;
+  color: #ffffff;
+}
+
+#nav-header {
+  background: #a9b3bd;
+  padding: 2rem 0;
+  width: 100%;
+}
+#nav-header .main-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-header .main-nav .logo {
+  margin: 0 4rem;
+}
+#nav-header .main-nav .menu-btn {
+  z-index: 999;
+  cursor: pointer;
+  margin: 0 4rem;
+}
+#nav-header .main-nav .menu-btn .btn-line {
   width: 28px;
   height: 3px;
   margin-bottom: 5px;
   background: #ffffff;
 }
-#nav-header .menu-btn.close {
+#nav-header .main-nav .menu-btn.close {
   transform: rotate(180deg);
 }
-#nav-header .menu-btn.close .btn-line:nth-child(1) {
+#nav-header .main-nav .menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-#nav-header .menu-btn.close .btn-line:nth-child(2) {
+#nav-header .main-nav .menu-btn.close .btn-line:nth-child(2) {
   opacity: 0;
 }
-#nav-header .menu-btn.close .btn-line:nth-child(3) {
+#nav-header .main-nav .menu-btn.close .btn-line:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 #nav-header .nav-container {
@@ -75,14 +144,14 @@ table {
   display: none;
 }
 #nav-header .nav-container .nav-links a {
-  font-weight: bold;
-  font-size: 4.8rem;
-  line-height: 8.5rem;
-  color: #ffffff;
   text-decoration: none;
 }
 #nav-header .nav-container .nav-links a:hover {
   color: #222222;
+}
+
+* {
+  transition: all 0.5s ease-in-out;
 }
 
 html {
@@ -102,14 +171,7 @@ p {
   line-height: 2.6rem;
 }
 
-.jumbo {
-  font-weight: bold;
-  font-size: 6.4rem;
-  line-height: 7.5rem;
-  color: #ffffff;
-}
-
-#main #main-header .bg {
+#main-header .bg {
   background-image: url("/img/home/home-jumbotron.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -117,14 +179,19 @@ p {
   height: 100vh;
   margin: 0 0 3rem 0;
 }
-#main #main-header .bg .jumbo {
+#main-header .bg .jumbo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 80%;
 }
-#main #main-header .bg .jumbo h2 {
+#main-header .bg .jumbo h2 {
   padding: 0 0 0 3rem;
+}
+
+#main {
+  margin: 0 4rem 4rem 4rem;
+  padding: 0 4rem;
 }
 #main .section {
   display: flex;
@@ -133,15 +200,7 @@ p {
 #main .section .text-content {
   width: 50%;
   align-self: center;
-}
-#main .section .text-content h2 {
-  margin: 0 0 4rem 0;
-}
-#main .section .text-content h2 .sub {
-  font-weight: bold;
-  font-size: 2.8rem;
-  color: #222222;
-  margin-bottom: 1rem;
+  align-self-margin: 0 0 4rem 0;
 }
 #main .section .img-content {
   width: 50%;
@@ -154,12 +213,6 @@ p {
 }
 #main #projects {
   padding: 0 4rem;
-}
-#main #projects h2 .sub {
-  font-weight: bold;
-  font-size: 2.8rem;
-  color: #222222;
-  margin-bottom: 1rem;
 }
 #main #projects .project {
   display: flex;
@@ -227,12 +280,6 @@ p {
 #services .tab-content .tab-text {
   width: 50%;
 }
-#services .tab-content .tab-text h2 .sub {
-  font-weight: bold;
-  font-size: 2.8rem;
-  color: #222222;
-  margin-bottom: 1rem;
-}
 #services .tab-content .tab-img {
   width: 50%;
   text-align: center;
@@ -276,6 +323,15 @@ p {
   display: flex;
   flex-direction: column;
 }
+#contact .contact-section form select, #contact .contact-section form input[type=text], #contact .contact-section form input[type=email], #contact .contact-section form textarea {
+  width: 50rem;
+  height: 2.6rem;
+  border-radius: 3px;
+  outline: none;
+  border: 0.5px solid lightgray;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
 #contact .contact-section form label {
   margin: 1rem 0;
 }
@@ -288,33 +344,6 @@ p {
 }
 #contact .contact-section form .email-input p {
   font-size: 1.2rem;
-}
-#contact .contact-section form .email-input input {
-  width: 50rem;
-  height: 2.6rem;
-  border-radius: 3px;
-  outline: none;
-  border: 0.5px solid lightgray;
-  padding: 0.5rem;
-  margin: 1rem 0 0 0;
-}
-#contact .contact-section form .buildings select {
-  width: 50rem;
-  height: 2.6rem;
-  border-radius: 3px;
-  outline: none;
-  border: 0.5px solid lightgray;
-  padding: 0.5rem;
-  margin: 1rem 0 0 0;
-}
-#contact .contact-section form .project-summary textarea {
-  width: 50rem;
-  height: 15rem;
-  border-radius: 3px;
-  outline: none;
-  border: 0.5px solid lightgray;
-  padding: 0.5rem;
-  margin: 1rem 0 0 0;
 }
 #contact .contact-section form .radio-options input {
   margin: 1rem 0;
@@ -329,49 +358,14 @@ p {
   margin-bottom: 2.6rem;
 }
 
-.btn {
-  margin: 2rem 0;
-  padding: 1.6rem 5rem;
-  background: #ffffff;
-  border: 1px solid;
-  cursor: pointer;
-  outline: none;
-  font-family: Roboto, Arial, sans-serif;
-}
-.btn.learn:hover {
-  background: #5e9fb9;
-  color: #ffffff;
-}
-.btn.link {
-  font-size: 3rem;
-}
-.btn.link:hover {
-  color: #ffffff;
-  background: #222222;
-}
-.btn.active-tab {
-  background: #5e9fb9;
-  color: #ffffff;
-}
-
 footer {
   background: #828282;
-  font-weight: regular;
-  font-size: 1.3rem;
-  line-height: 2.6rem;
-  color: #ffffff;
   padding: 4rem 0 0 0;
 }
 footer span {
   display: flex;
   justify-content: center;
   margin: 1rem 0 0 0;
-}
-footer .ft-head {
-  font-weight: regular;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  color: #ffffff;
 }
 footer .ft-flex {
   display: flex;
@@ -403,12 +397,17 @@ footer .ft-connect input {
   }
 }
 @media screen and (max-width: 500px) {
-  #main #main-header .bg {
+  #main-header .bg {
     height: 50vh;
   }
-  #main #main-header .bg h2 {
+  #main-header .bg h2 {
     padding: 0;
     font-size: 5rem;
+  }
+
+  #main {
+    margin: 0;
+    padding: 0;
   }
   #main .section {
     flex-direction: column;
