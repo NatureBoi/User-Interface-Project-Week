@@ -247,8 +247,12 @@ p {
   margin: 0 auto;
 }
 
+.contact-head h2 {
+  margin: -10rem 0 6rem 5rem;
+}
 .contact-head img {
   width: 100%;
+  height: 20rem;
 }
 .contact-head img.mobile-img {
   display: none;
@@ -262,6 +266,7 @@ p {
 #contact .contact-section {
   width: 50%;
   font-size: 2rem;
+  margin: 0 0 0 4rem;
 }
 #contact .contact-section h2 {
   font-size: 3rem;
@@ -482,6 +487,34 @@ footer .ft-connect input {
   }
   #services .tab-content .tab-img {
     width: 100%;
+  }
+
+  #contact {
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  #contact .contact-section {
+    width: 100%;
+    margin: 0;
+  }
+  #contact .contact-section form .email-input input {
+    width: 30rem;
+  }
+  #contact .contact-section form .buildings select {
+    width: 30rem;
+  }
+  #contact .contact-section form .project-summary textarea {
+    width: 30rem;
+  }
+  #contact .contact-section form .submit-container .btn {
+    width: 100%;
+    justify-self: center;
+  }
+  #contact .contact-work {
+    width: 100%;
+  }
+  #contact .contact-work input {
+    width: 20rem;
   }
 }
 
