@@ -58,6 +58,7 @@ table {
   font-weight: bold;
   font-size: 2.4rem;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .nav-text {
@@ -378,6 +379,27 @@ footer .ft-connect input {
   outline: none;
   border: 0;
   padding: 1rem;
+}
+footer .ft-connect .ft-email-container {
+  display: flex;
+  position: relative;
+}
+footer .ft-connect .ft-email-container .ft-btn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  text-align: center;
+  border-radius: 0px 3px 3px 0px;
+  background: #5e9fb9;
+  cursor: pointer;
+}
+footer .ft-connect .ft-email-container .ft-btn:hover {
+  background: black;
+}
+footer .ft-connect .ft-email-container .ft-btn i {
+  font-size: 1.6rem;
+  margin: 1rem 0 0 0;
 }
 
 @media screen and (max-width: 500px) {
