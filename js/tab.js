@@ -17,6 +17,7 @@ class TabLinks {
     this.tabs.forEach(el => el.classList.remove("active-tab"));
     this.element.classList.add("active-tab");
     this.h2.innerHTML = this.element.innerHTML;
+    TweenLite.from(this.h2, 1, { x: 50, opacity: 0 });
     this.item.select();
   }
 }
@@ -29,6 +30,7 @@ class TabItem {
     let items = document.querySelectorAll(".timg");
     items.forEach(item => item.classList.remove("img-active"));
     this.element.classList.add("img-active");
+    TweenLite.from(this.element, 2, { y: 50, opacity: 0 });
   }
 }
 

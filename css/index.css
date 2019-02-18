@@ -93,6 +93,16 @@ table {
   color: #ffffff;
 }
 
+@-webkit-keyframes animat_show {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 #nav-header {
   background: #a9b3bd;
   padding: 2rem 0;
@@ -155,6 +165,7 @@ table {
 html {
   height: 100%;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -176,6 +187,19 @@ p {
   background-size: cover;
   height: 100vh;
   margin: 0 0 3rem 0;
+}
+#main-header .bg a {
+  text-decoration: none;
+}
+#main-header .bg .bg-arrow {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  text-decoration: none;
+  font-size: 4.2rem;
+}
+#main-header .bg .bg-arrow i {
+  color: white;
 }
 #main-header .bg .jumbo {
   display: flex;
@@ -340,6 +364,9 @@ p {
   display: flex;
   flex-direction: column;
 }
+#contact .contact-section form .project-summary textarea {
+  height: 15rem;
+}
 #contact .contact-section form .email-input p {
   font-size: 1.2rem;
 }
@@ -354,6 +381,16 @@ p {
 #contact .contact-work h2 {
   font-size: 3rem;
   margin-bottom: 2.6rem;
+}
+
+.img-hide {
+  visibility: hidden;
+}
+
+.fadeIn {
+  -webkit-animation: animat_show 0.8s ease-out;
+  animation: animat_show 0.8s ease-out;
+  visibility: visible;
 }
 
 footer {
